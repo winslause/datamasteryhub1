@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Professional Time Series Forecasting for Financial Predictions
+{% endblock %}
+
+{% block content %}
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container Styles */
+.business-container {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Introduction Section */
+#business-intro {
+    background: #1E3A8A; /* Deep Blue */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.business-intro-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.business-intro-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #f9f9f9; /* Lighter shade for better contrast */
+}
+
+/* Services Section */
+#business-services {
+    padding: 40px 20px;
+}
+
+.business-services-heading {
+    font-size: 2.2em;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.business-services-subheading {
+    font-size: 1.5em;
+    color: #003366;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.business-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.business-service-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.business-service-title {
+    font-size: 1.8em;
+    color: #1E3A8A; /* Deep Blue */
+    margin-bottom: 15px;
+}
+
+.business-service-description {
+    font-size: 1.1em;
+    color: #333; /* Darker text for better readability */
+}
+
+/* Contact Section */
+#business-cta {
+    background: #1E3A8A; /* Deep Blue */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.business-cta-heading {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.business-cta-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.business-cta-button {
+    background: #ffffff;
+    color: #1E3A8A; /* Deep Blue */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #1E3A8A; /* Deep Blue */
+    transition: background 0.3s, color 0.3s;
+}
+
+.business-cta-button:hover {
+    background: #1E3A8A; /* Deep Blue */
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .business-intro-heading {
+        font-size: 2em;
+    }
+
+    .business-intro-description {
+        font-size: 1em;
+    }
+
+    .business-services-heading, .business-cta-heading {
+        font-size: 1.8em;
+    }
+
+    .business-services-subheading {
+        font-size: 1.3em;
+    }
+}
+</style>
+
+<div class="business-container">
+    <!-- Introduction Section -->
+    <section id="business-intro">
+        <h1 class="business-intro-heading">Enhance Financial Forecasting with Time Series Analysis</h1>
+        <p class="business-intro-description">
+            Leverage our expert Time Series Forecasting services for accurate financial predictions. Our models help businesses predict market trends, forecast revenue, optimize operations, and make data-driven financial decisions.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="business-services">
+        <h2 class="business-services-heading">Our Financial Time Series Forecasting Services</h2>
+        <h3 class="business-services-subheading">Precise Predictions for Business Growth</h3>
+        
+        <div class="business-services-grid">
+            <div class="business-service-card">
+                <h4 class="business-service-title">Market Trend Forecasting</h4>
+                <p class="business-service-description">Predict market trends to stay ahead of competitors and optimize business strategies.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Revenue Prediction</h4>
+                <p class="business-service-description">Accurate revenue forecasting based on historical data to drive financial planning.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Financial Risk Analysis</h4>
+                <p class="business-service-description">Identify financial risks and mitigate them using time series models and statistical analysis.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Cash Flow Forecasting</h4>
+                <p class="business-service-description">Predict future cash flows for better liquidity management and financial stability.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Stock Market Forecasting</h4>
+                <p class="business-service-description">Time series forecasting to predict stock price movements and assist in investment decisions.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Financial Statement Analysis</h4>
+                <p class="business-service-description">Analyze financial statements using time series models to predict future performance.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Business Growth Forecasting</h4>
+                <p class="business-service-description">Forecast business growth patterns and develop strategic plans for future expansion.</p>
+            </div>
+            <div class="business-service-card">
+                <h4 class="business-service-title">Forecasting for Startups</h4>
+                <p class="business-service-description">Predict financial outcomes and plan for scalability and sustainability in the startup phase.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloadable Resources Section -->
+    <div class="download-section">
+        <h3>Available Resources for Financial Predictions</h3>
+        <ul class="download-list">
+            {% for resource in resources %}
+                <li class="download-item">
+                    <span>{{ resource.title }}</span>
+                    <a href="{{ resource.file.url }}" class="download-btn" download>Download</a>
+                </li>
+            {% empty %}
+                <li>No resources available at the moment.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="data-mining-cta-section">
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20Time%20Series%20Experts%20%F0%9F%91%8B%0AI%20am%20interested%20in%20Time%20Series%20Forecasting%20for%20financial%20predictions." class="btn btn-success">
+            <i class="fab fa-whatsapp"></i>
+            Chat with Time Series Experts
+        </a>
+    </div>
+</div>
+
+{% endblock %}

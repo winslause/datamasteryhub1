@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Exam Preparation Services
+{% endblock %}
+
+{% block content %}
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container Styles */
+.exam-container {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+/* Section Title and Description */
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.service-item h2 {
+    font-size: 1.8em;
+    color: #1E90FF;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    background-color: #4682B4;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service-item {
+        max-width: 100%;
+    }
+}
+</style>
+
+<div class="exam-container">
+    <!-- Introduction Section -->
+    <section id="exam-intro">
+        <h1 class="section-title">Comprehensive Exam Preparation Services</h1>
+        <p class="section-description">
+            Our exam preparation services offer tailored support and resources to help you succeed in your academic assessments.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="exam-services">
+        <h2 class="section-title">Our Exam Services</h2>
+        
+        <div class="services">
+            <!-- Service Cards -->
+            <div class="service-item">
+                <h2>Mock Exams</h2>
+                <p>Participate in realistic mock exams to evaluate your knowledge and improve your exam techniques.</p>
+            </div>
+            <div class="service-item">
+                <h2>Study Guides</h2>
+                <p>Access comprehensive study guides that summarize key concepts and provide practice questions.</p>
+            </div>
+            <div class="service-item">
+                <h2>Exam Strategies</h2>
+                <p>Learn effective exam strategies to manage time and maximize performance on test day.</p>
+            </div>
+            <div class="service-item">
+                <h2>Personal Tutoring</h2>
+                <p>Receive one-on-one tutoring from experienced educators who can address your specific needs.</p>
+            </div>
+            <div class="service-item">
+                <h2>Resource Materials</h2>
+                <p>Get access to a wide range of resources including textbooks, articles, and online materials.</p>
+            </div>
+            <div class="service-item">
+                <h2>Performance Analysis</h2>
+                <p>Benefit from detailed performance analysis and feedback after mock exams to identify areas for improvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="exam-resources">
+        <h2 class="section-title">Available Exam Resources</h2>
+        <p class="section-description">Explore our collection of resources designed to enhance your exam preparation.</p>
+
+        <div class="resources">
+            {% for resource in documents %}
+            <div class="resources-item">
+                <h2>{{ resource.title }}</h2>
+                <p>{{ resource.description }}</p>
+                <a href="{{ resource.file.url }}" download class="cta-button">Download</a>
+            </div>
+            {% empty %}
+            <p>No resources available at the moment. Please check back later.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="exam-cta">
+        <h2 class="section-title">Get Expert Exam Preparation Support Today</h2>
+        <p class="section-description">
+            Connect with us to explore our exam preparation services and enhance your academic performance.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20StudySmart%20Experts%20%F0%9F%91%8B%0AAre%20you%20available%20to%20assist%20me%20with%20Exams%3F" class="cta-button">
+            <i class="fab fa-whatsapp"></i>
+            Chat With Experts
+        </a>
+    </section>
+</div>
+{% endblock %}

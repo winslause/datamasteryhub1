@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Introduction Section -->
+    <section id="reports-intro" class="text-center mb-5">
+        <h1 class="display-4 font-weight-bold text-primary">Elevate Your Business with Data Scraping & Research Services</h1>
+        <p class="lead text-muted">
+            Unlock valuable business insights with our expert data scraping and business research services. We provide tailored, actionable reports that help you make informed decisions and stay ahead of the competition.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="reports-services" class="text-center mb-5">
+        <h2 class="h2 font-weight-bold text-dark">Our Services</h2>
+        <p class="lead text-muted mb-4">Explore our range of data scraping and research services to fuel your business growth.</p>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Research Reports -->
+            <div class="col">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Business Data Scraping</h4>
+                        <p class="card-text">Extract actionable data from websites, social media, and online sources to fuel your business strategies.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Business Reports -->
+            <div class="col">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Market & Competitor Analysis</h4>
+                        <p class="card-text">Gain valuable insights into your market and competitors through comprehensive research and analysis.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Technical Reports -->
+            <div class="col">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Data Integration & Visualization</h4>
+                        <p class="card-text">We help you integrate and visualize data from multiple sources, empowering you to make better decisions.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Reports -->
+            <div class="col">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Business Research Reports</h4>
+                        <p class="card-text">Comprehensive reports that include detailed research and data analysis, tailored to your specific business needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="reports-resources" class="text-center mb-5">
+        <h2 class="h2 font-weight-bold text-dark">Downloadable Resources</h2>
+        <p class="lead text-muted mb-4">Get access to valuable business research and data scraping materials available for download.</p>
+
+        <!-- List of downloadable resources -->
+        <ul class="list-group list-group-flush">
+            {% for resource in resources %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>{{ resource.title }}</strong>
+                    <a href="{{ resource.file.url }}" class="btn btn-outline-primary btn-sm" download>Download</a>
+                </li>
+            {% empty %}
+                <li class="list-group-item text-center">No resources available at the moment. Please check back later.</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Call-to-Action (CTA) Section -->
+    <section id="data-mining-cta-section" class="text-center">
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20StudySmart%20Experts%20%F0%9F%91%8B%0AAre%20you%20available%20to%20assist%20me%20with%20Reports%3F" class="btn btn-success btn-lg">
+            <i class="fab fa-whatsapp"></i> Contact an Expert
+        </a>
+    </section>
+</div>
+
+{% endblock %}

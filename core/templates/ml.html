@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid machine-learning-container">
+    <!-- Introduction Section -->
+    <section id="ml-intro" class="text-center py-5">
+        <h1 class="display-4 fw-bold">Accelerate Your Business with Machine Learning Solutions</h1>
+        <p class="lead">
+            Drive growth and innovation in your business through advanced machine learning solutions. Our tailored services ensure actionable insights and improved decision-making for your enterprise.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="ml-services" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold">Our Business ML Solutions</h2>
+            <p class="text-muted mb-5">Transform your business with intelligent automation and data-driven decision-making.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Predictive Analytics</h4>
+                            <p class="card-text">Leverage predictive models to forecast business trends and customer behavior, enhancing decision-making and operational efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">AI-Driven Automation</h4>
+                            <p class="card-text">Automate routine tasks and processes using AI and machine learning, allowing your team to focus on high-value activities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Customer Segmentation</h4>
+                            <p class="card-text">Analyze customer data to create targeted segments for personalized marketing and improved customer retention.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Fraud Detection</h4>
+                            <p class="card-text">Implement real-time fraud detection using machine learning algorithms to safeguard your business from fraudulent activities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Supply Chain Optimization</h4>
+                            <p class="card-text">Improve supply chain efficiency by forecasting demand, optimizing inventory, and reducing operational costs with machine learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Risk Management</h4>
+                            <p class="card-text">Analyze potential risks in your business operations and minimize losses by implementing data-driven risk management strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Listing Section -->
+    <section class="document-list-section py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center">Available Case Studies & Resources</h2>
+            <ul class="list-unstyled mt-4">
+                {% for document in documents %}
+                    <li class="mb-3">
+                        <a href="{{ document.file.url }}" download class="text-decoration-none text-primary">{{ document.title }}</a> - Uploaded on {{ document.upload_date }}
+                        <p class="text-muted">{{ document.description }}</p>
+                    </li>
+                {% empty %}
+                    <p class="text-center">No documents available at the moment.</p>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="ml-cta" class="text-center py-5 text-dark">
+        <h2 class="fw-bold">Elevate Your Business with Our ML Solutions</h2>
+        <p class="lead">
+            Let us help you harness the power of machine learning for better business outcomes.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20StudySmart%20Experts%20%F0%9F%91%8B%0AAre%20you%20available%20to%20assist%20me%20with%20Machine%20Learning%3F" class="btn btn-success btn-lg mt-3">
+            <i class="fab fa-whatsapp"></i> Chat with a Business ML Expert!
+        </a>
+    </section>
+</div>
+{% endblock %}

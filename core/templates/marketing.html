@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Introduction Section -->
+    <section id="marketing-intro" class="text-center mb-5">
+        <h1 class="display-4 font-weight-bold text-primary">Unlock the Power of Data Insights</h1>
+        <p class="lead text-muted">
+            Discover powerful analytics, strategic insights, and actionable reports that help drive your business forward.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="marketing-services" class="mb-5">
+        <h2 class="text-center mb-4 font-weight-bold text-secondary">Our Data Analytics Services</h2>
+        <p class="text-center text-muted mb-5">Providing you with the insights you need to make informed business decisions.</p>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Strategic Data Analytics</h5>
+                        <p class="card-text text-muted">Tailored data strategies to help you optimize operations and enhance performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Business Intelligence</h5>
+                        <p class="card-text text-muted">Advanced analytics tools and dashboards to visualize your business performance in real-time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Predictive Analytics</h5>
+                        <p class="card-text text-muted">Utilizing predictive models to forecast trends and behaviors for better decision-making.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Market Research</h5>
+                        <p class="card-text text-muted">In-depth market research and consumer behavior analysis to understand trends and opportunities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Performance Dashboards</h5>
+                        <p class="card-text text-muted">Custom dashboards designed to give you at-a-glance performance metrics and KPIs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Actionable Reports</h5>
+                        <p class="card-text text-muted">Detailed reports with actionable insights to guide strategic business decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section (Downloads) -->
+    <section id="marketing-documents" class="mb-5">
+        <h2 class="text-center mb-4 font-weight-bold text-secondary">Business Data Insights & Reports</h2>
+        <p class="text-center text-muted mb-5">Download our exclusive reports, case studies, and analytics to empower your business decisions.</p>
+        
+        <div class="row">
+            {% for document in documents %}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-light">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">{{ document.title }}</h5>
+                            <p class="card-text text-muted">{{ document.description }}</p>
+                            <a href="{{ document.file.url }}" download class="btn btn-success btn-block">Download</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="text-center w-100">No resources available at the moment. Please check back later.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="marketing-cta" class="text-center">
+        <h2 class="display-4 font-weight-bold text-success">Transform Your Business with Data</h2>
+        <p class="lead text-muted">Get in touch with us to explore how data analytics can revolutionize your business strategy.</p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20StudySmart%20Experts%20%F0%9F%91%8B%0AAre%20you%20available%20to%20assist%20me%20with%20analytics%20projects%3F" class="btn btn-success btn-lg">
+            <i class="fab fa-whatsapp"></i> Chat with Experts
+        </a>
+    </section>
+</div>
+
+<style>
+    /* Custom styles for the page */
+    .card {
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+</style>
+
+{% endblock %}

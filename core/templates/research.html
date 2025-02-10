@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="data-visualization-container">
+    <!-- Introduction Section -->
+    <section id="data-visualization-intro">
+        <h1 class="data-visualization-intro-heading">Elevate Your Business with Data-Driven Insights</h1>
+        <p class="data-visualization-intro-description">
+            Unlock the power of data with our cutting-edge data visualization and dashboard solutions. Whether you're analyzing sales performance, customer behavior, or operational metrics, our expert services provide you with the tools to make informed decisions and drive success.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="data-visualization-services">
+        <h2 class="data-visualization-services-heading">Our Data Visualization Services</h2>
+        <h3 class="data-visualization-services-subheading">Custom Dashboards for Your Business Needs</h3>
+        
+        <div class="data-visualization-services-grid">
+            <div class="data-visualization-service-card">
+                <h4 class="data-visualization-service-title">Business Dashboards</h4>
+                <p class="data-visualization-service-description">Create interactive dashboards that provide real-time insights into your business operations. From sales metrics to employee performance, we offer customized solutions tailored to your unique needs.</p>
+            </div>
+            <div class="data-visualization-service-card">
+                <h4 class="data-visualization-service-title">Data Analytics and Reporting</h4>
+                <p class="data-visualization-service-description">Utilize data analytics to uncover trends, patterns, and opportunities for growth. We provide detailed reporting with visual aids like graphs and charts, making complex data easy to understand.</p>
+            </div>
+            <div class="data-visualization-service-card">
+                <h4 class="data-visualization-service-title">KPI Tracking</h4>
+                <p class="data-visualization-service-description">Track your business performance through Key Performance Indicators (KPIs). Our dashboards offer a clear view of your business’s health and help you stay on top of your goals and objectives.</p>
+            </div>
+            <div class="data-visualization-service-card">
+                <h4 class="data-visualization-service-title">Custom Data Visualizations</h4>
+                <p class="data-visualization-service-description">We design visually compelling and informative data visualizations to simplify complex data. Whether you need pie charts, bar graphs, or custom visuals, our team ensures clarity and precision in every chart.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="data-visualization-resources">
+        <h2 class="data-visualization-resources-heading">Tools & Resources</h2>
+        <p class="data-visualization-resources-description">
+            Access a variety of resources, including case studies, data visualization best practices, and tutorials, to help you make the most of your data. Learn how to optimize your visualizations for maximum impact and business success.
+        </p>
+    </section>
+
+    <!-- Download Resources Section -->
+    <section id="data-visualization-downloads">
+        <h2 class="data-visualization-downloads-heading">Downloadable Solutions</h2>
+        <p class="data-visualization-downloads-description">
+            Below are some sample projects and templates that can help you get started with your data visualization and dashboard solutions. Click to download.
+        </p>
+        <ul class="data-visualization-downloads-list">
+            {% for resource in resources %}
+                <li>
+                    <a href="{{ resource.file.url }}" class="data-visualization-downloads-link" download>{{ resource.title }}</a>
+                </li>
+            {% empty %}
+                <li>No resources available for download at the moment.</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="data-visualization-cta">
+        <h2 class="data-visualization-cta-heading">Transform Your Business with Data Visualization</h2>
+        <p class="data-visualization-cta-description">
+            Connect with us today to discuss how our data visualization and dashboard solutions can help streamline your operations and uncover valuable insights. Let us help you unlock the potential of your business data.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20Data%20Experts%20%F0%9F%91%8B%0AI%20am%20interested%20in%20Data%20Visualization%20solutions" class="cta-button">
+            <i class="fab fa-whatsapp"></i>
+            Chat With Our Experts
+        </a>
+    </section>
+</div>
+
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Container Styles */
+.data-visualization-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction Section */
+#data-visualization-intro {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.data-visualization-intro-heading {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.data-visualization-intro-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Services Section */
+#data-visualization-services {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.data-visualization-services-heading {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.data-visualization-services-subheading {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.data-visualization-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.data-visualization-service-card {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.data-visualization-service-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.data-visualization-service-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Resources Section */
+#data-visualization-resources {
+    padding: 40px 20px;
+    background-color: #eaf2f8;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.data-visualization-resources-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.data-visualization-resources-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Download Resources Section */
+#data-visualization-downloads {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.data-visualization-downloads-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.data-visualization-downloads-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.data-visualization-downloads-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.data-visualization-downloads-link {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+.data-visualization-downloads-link:hover {
+    text-decoration: none;
+}
+
+/* Contact Section */
+#data-visualization-cta {
+    padding: 40px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.data-visualization-cta-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.data-visualization-cta-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.data-visualization-cta-button {
+    background-color: #28a745 !important;
+        border-color: #28a745 !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.data-visualization-cta-button:hover {
+    background-color: #28a745;
+        border-color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .data-visualization-service-card {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}

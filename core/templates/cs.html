@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content-container">
+    <!-- Background Image Section -->
+    <section class="background-section" style="background-image: url('/static/images/survey_analysis_bg.jpg'); background-size: cover; background-position: center;">
+        <div class="background-content text-center py-5" style="background-color: black;">
+            <h1 class="background-title display-4 text-white">Discover the Power of Surveys & Data Analysis</h1>
+            <p class="background-description text-white lead">
+                Elevate your business decisions with expert survey design and comprehensive data analysis. From collecting meaningful insights to analyzing patterns and trends, we offer solutions tailored to your needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section my-5">
+        <!-- <h2 class="services-title text-center mb-4">Survey & Data Analysis Services</h2> -->
+        <h3 class="services-subtitle text-center mb-5">Your Path to Data-Driven Business Success</h3>
+
+        <div class="row services-items text-center">
+            <div class="col-md-4 services-item mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="services-item-title">Survey Design</h4>
+                        <p class="services-item-description">Create surveys that yield actionable data and meaningful insights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 services-item mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="services-item-title">Data Collection</h4>
+                        <p class="services-item-description">Efficient data gathering through online surveys and other methods.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 services-item mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="services-item-title">Data Processing</h4>
+                        <p class="services-item-description">Clean, process, and transform raw survey data into actionable insights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 services-item mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="services-item-title">Statistical Analysis</h4>
+                        <p class="services-item-description">Advanced statistical methods to interpret your survey data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 services-item mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="services-item-title">Report Generation</h4>
+                        <p class="services-item-description">Comprehensive reports to visualize survey results and data analysis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 services-item mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="services-item-title">Projects</h4>
+                        <p class="services-item-description">End-to-end support for your survey and data analysis projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section bg-light py-5">
+        <h2 class="resources-title text-center mb-4">Survey Resources</h2>
+        <p class="resources-description text-center mb-5">
+            Access top-tier guides, templates, and articles to help you succeed in your data analysis projects.
+        </p>
+    </section>
+
+    <!-- Document Listing Section -->
+    <section class="document-list-section py-5">
+        <h2 class="document-list-title text-center mb-4">Available Reports & Projects</h2>
+        <ul class="document-list list-unstyled text-center">
+            {% for document in documents %}
+                <li class="mb-3">
+                    <a href="{{ document.file.url }}" class="btn btn-outline-primary" download>{{ document.title }}</a> - Uploaded on {{ document.upload_date }}
+                    <p>{{ document.description }}</p>
+                </li>
+            {% empty %}
+                <p>No documents available for Survey & Data Analysis.</p>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <div id="data-mining-cta-section" class="text-center my-5">
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20StudySmart%20Experts%20%F0%9F%91%8B%0AAre%20you%20available%20to%20assist%20me%20with%20Survey%20and%20Data%20Analysis%20projects%3F" class="cta-button btn btn-success btn-lg">
+            <i class="fab fa-whatsapp"></i>
+            Get Expert Assistance
+        </a>
+    </div>
+
+</div>
+{% endblock %}

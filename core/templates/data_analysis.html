@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Professional Data Analysis Solutions for Your Business
+{% endblock %}
+
+{% block content %}
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container Styles */
+.data-analysis-container {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+/* Section Title and Description */
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Services Section */
+.services, .resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item, .resources-item {
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.service-item h2, .resources-item h2 {
+    font-size: 1.8em;
+    color: #1E90FF;
+    margin-bottom: 15px;
+}
+
+.service-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.service-item li {
+    margin-bottom: 10px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    background-color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .services, .resources {
+        flex-direction: column;
+    }
+
+    .service-item, .resources-item {
+        max-width: 100%;
+    }
+}
+</style>
+
+<div class="data-analysis-container">
+    <!-- Introduction Section -->
+    <section id="da-intro">
+        <h1 class="section-title">Data-Driven Solutions for Business Excellence</h1>
+        <p class="section-description">
+            Unlock the power of data with our tailored analytics services. We provide actionable insights to optimize your business operations, enhance decision-making, and accelerate growth. Leverage our expertise in data analysis tools to stay ahead of the competition.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="da-services">
+        <h2 class="section-title">Our Data Analysis Solutions</h2>
+        
+        <div class="services">
+            <!-- Service Cards -->
+            <div class="service-item">
+                <h2>SPSS</h2>
+                <p>Harness SPSS for sophisticated statistical analysis and data management, perfect for large datasets and strategic insights.</p>
+            </div>
+            <div class="service-item">
+                <h2>STATA</h2>
+                <p>Utilize STATA for comprehensive data analysis, regression modeling, and high-level data visualization tailored for your business needs.</p>
+            </div>
+            <div class="service-item">
+                <h2>R</h2>
+                <p>Use R for advanced statistical computing and data visualization, enhancing your business analytics and forecasting capabilities.</p>
+            </div>
+            <div class="service-item">
+                <h2>Python</h2>
+                <p>Implement Python to build powerful data analysis models, machine learning algorithms, and automation solutions for your business.</p>
+            </div>
+            <div class="service-item">
+                <h2>Jamovi</h2>
+                <p>Leverage Jamovi for user-friendly statistical analysis, with modern features to drive business insights without the steep learning curve.</p>
+            </div>
+            <div class="service-item">
+                <h2>Data Visualization</h2>
+                <p>Transform complex data into compelling visualizations, providing clear insights and driving strategic business decisions.</p>
+            </div>
+            <div class="service-item">
+                <h2>SAS</h2>
+                <p>Maximize the potential of SAS for advanced data analytics and predictive modeling, empowering your business to make data-driven decisions.</p>
+            </div>
+            <div class="service-item">
+                <h2>Reports</h2>
+                <p>Generate customized reports to communicate findings clearly, aiding in business presentations, strategy sessions, and decision-making.</p>
+            </div>
+            <div class="service-item">
+                <h2>Research Reviews</h2>
+                <p>Get in-depth research reviews and actionable feedback to refine your business strategies and data analysis projects.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section id="da-resources">
+        <h2 class="section-title">Key Business Resources</h2>
+        <p class="section-description">Access vital tools, templates, and materials designed to enhance your business data analysis and decision-making processes.</p>
+
+        <div class="resources">
+            {% for resource in documents %}
+            <div class="resources-item">
+                <h2>{{ resource.title }}</h2>
+                <p>{{ resource.description }}</p>
+                <a href="{{ resource.file.url }}" download class="cta-button">Download Resource</a>
+            </div>
+            {% empty %}
+            <p>No resources available at the moment. Please check back later.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="da-cta">
+        <h2 class="section-title">Contact Us for Business Solutions</h2>
+        <p class="section-description">
+            Reach out to explore how our data analysis services can drive business success and strategic growth. Let us help you turn data into actionable insights.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=18438437046&text=Hello%20Data%20Analysis%20Experts%20%F0%9F%91%8B%0AAre%20you%20available%20to%20assist%20me%20with%20business%20data%20analysis%3F" class="cta-button">
+            <i class="fab fa-whatsapp"></i>
+            Connect with Our Experts
+        </a>
+    </section>
+</div>
+{% endblock %}
