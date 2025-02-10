@@ -60,12 +60,12 @@ def login_page(request):
     return render(request, 'login.html')
 
 # View for Reports Page Documents
-def reports(request):
-    documents = Document.objects.filter(page='reports')
+def data_scrapping(request):
+    documents = Document.objects.filter(page='data_scrapping')
     return render(request, 'reports.html', {'documents': documents})
 
 # View for CS Page Documents
-def cs(request):
+def survey(request):
     documents = Document.objects.filter(page='cs')
     return render(request, 'cs.html', {'documents': documents})
 
@@ -85,7 +85,7 @@ def data_analysis(request):
     return render(request, 'data_analysis.html', {'documents': documents})
 
 # View for Data Mining Page Documents
-def data_mining(request):
+def data_cleaning(request):
     documents = Document.objects.filter(page='data_mining')
     return render(request, 'data_mining.html', {'documents': documents})
 
@@ -100,23 +100,23 @@ def business_analytics(request):
     return render(request, 'business_analytics.html', {'documents': documents})
 
 # View for Case Studies Page Documents
-def case_studies(request):
-    documents = Document.objects.filter(page='case_studies')
+def data_insights(request):
+    documents = Document.objects.filter(page='data_insights')
     return render(request, 'case_studies.html', {'documents': documents})
 
 # View for Business Page Documents
-def business(request):
-    documents = Document.objects.filter(page='business')
+def business_forecasting(request):
+    documents = Document.objects.filter(page='business_forecasting')
     return render(request, 'business.html', {'documents': documents})
 
 # View for Marketing Page Documents
-def marketing(request):
-    documents = Document.objects.filter(page='marketing')
+def predictive_analysis(request):
+    documents = Document.objects.filter(page='predictive_analysis')
     return render(request, 'marketing.html', {'documents': documents})
 
 # View for Research Page Documents
-def research(request):
-    documents = Document.objects.filter(page='research')
+def data_visualization(request):
+    documents = Document.objects.filter(page='data_visualization')
     return render(request, 'research.html', {'documents': documents})
 
 
