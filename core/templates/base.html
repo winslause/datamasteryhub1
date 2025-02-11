@@ -149,6 +149,62 @@ body {
   padding-right: 0 !important;
 }
 
+    
+      @media (max-width: 768px) {
+        .hero-section {
+            display: none !important;
+        }
+    }
+    /* Hide the section on smaller devices */
+@media (max-width: 768px) {
+.hero-section {
+  display: none !important;
+}
+}
+
+/* Show the section for larger devices */
+@media (min-width: 769px) {
+.hero-section {
+  display: flex !important;
+}
+}
+
+    
+      .email-container {
+        position: relative;
+      }
+      
+      .email {
+        z-index: 2;
+      }
+      
+      .social-icons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 500px; /* Adjust based on desired ring size */
+        height: 100px; /* Adjust based on desired ring size */
+        transform: translate(-50%, -50%);
+      }
+      
+      .icon {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #f8f9fa;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #0d6efd;
+        transform: rotate(var(--angle)) translate(100px) rotate(calc(-1 * var(--angle)));
+      }
+      
+      .facebook { --angle: 0deg; }
+      .twitter { --angle: 90deg; }
+      .instagram { --angle: 180deg; }
+      .linkedin { --angle: 270deg; }
     </style>
   </head>
 
@@ -190,63 +246,7 @@ body {
               </div>
           </div>
       </div>
-        <style>
-          @media (max-width: 768px) {
-            .hero-section {
-                display: none !important;
-            }
-        }
-        /* Hide the section on smaller devices */
-@media (max-width: 768px) {
-  .hero-section {
-      display: none !important;
-  }
-}
-
-/* Show the section for larger devices */
-@media (min-width: 769px) {
-  .hero-section {
-      display: flex !important;
-  }
-}
-
         
-          .email-container {
-            position: relative;
-          }
-          
-          .email {
-            z-index: 2;
-          }
-          
-          .social-icons {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 500px; /* Adjust based on desired ring size */
-            height: 100px; /* Adjust based on desired ring size */
-            transform: translate(-50%, -50%);
-          }
-          
-          .icon {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background-color: #f8f9fa;
-            border-radius: 50%;
-            text-decoration: none;
-            color: #0d6efd;
-            transform: rotate(var(--angle)) translate(100px) rotate(calc(-1 * var(--angle)));
-          }
-          
-          .facebook { --angle: 0deg; }
-          .twitter { --angle: 90deg; }
-          .instagram { --angle: 180deg; }
-          .linkedin { --angle: 270deg; }
-        </style>
         <script>
           function animateIcons() {
             const icons = document.querySelectorAll('.icon');
