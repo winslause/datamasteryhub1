@@ -218,43 +218,6 @@ body {
 
     <body>
         
-      <script>
-        // Function to check the screen size and toggle visibility
-        function checkScreenSize() {
-          var heroSection = document.getElementById('hero_section');
-          
-          // If the screen width is 768px or smaller, hide the hero section
-          if (window.innerWidth <= 768) {
-            heroSection.style.display = 'none';
-          } else {
-            // If the screen is larger than 768px, show the hero section
-            heroSection.style.display = 'block';
-          }
-        }
-      
-        // Run the function when the page is loaded
-        window.onload = checkScreenSize;
-      
-        // Run the function when the window is resized
-        window.onresize = checkScreenSize;
-      </script>
-      
-        
-        <script>
-          function animateIcons() {
-            const icons = document.querySelectorAll('.icon');
-            icons.forEach(icon => {
-              let angle = parseFloat(getComputedStyle(icon).getPropertyValue('--angle'));
-              angle += 0.5; // Adjust for speed
-              if (angle >= 360) angle -= 360;
-              icon.style.setProperty('--angle', angle + 'deg');
-            });
-            requestAnimationFrame(animateIcons);
-          }
-          
-          // Start the animation
-          animateIcons();
-        </script>
 
 
       <!-- Topbar End -->
