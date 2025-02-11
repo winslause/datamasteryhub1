@@ -191,17 +191,12 @@ body {
           </div>
       </div>
         <style>
-          /* Default state - hide for smaller devices */
-.hero-section {
-  display: none !important;
-}
-
-/* Show for larger devices */
-@media (min-width: 768px) { /* This breakpoint is for tablets and above, adjust as needed */
-  .hero-section {
-      display: flex !important;
-  }
-}
+          @media (max-width: 768px) {
+            .hero-section {
+                display: none !important;
+            }
+        }
+        
           .email-container {
             position: relative;
           }
