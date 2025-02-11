@@ -196,6 +196,20 @@ body {
                 display: none !important;
             }
         }
+        /* Hide the section on smaller devices */
+@media (max-width: 768px) {
+  .hero-section {
+      display: none !important;
+  }
+}
+
+/* Show the section for larger devices */
+@media (min-width: 769px) {
+  .hero-section {
+      display: flex !important;
+  }
+}
+
         
           .email-container {
             position: relative;
