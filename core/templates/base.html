@@ -252,6 +252,27 @@ body {
               </div>
           </div>
       </div>
+      <script>
+        // Function to check the screen size and toggle visibility
+        function checkScreenSize() {
+          var heroSection = document.getElementById('hero_section');
+          
+          // If the screen width is 768px or smaller, hide the hero section
+          if (window.innerWidth <= 768) {
+            heroSection.style.display = 'none';
+          } else {
+            // If the screen is larger than 768px, show the hero section
+            heroSection.style.display = 'block';
+          }
+        }
+      
+        // Run the function when the page is loaded
+        window.onload = checkScreenSize;
+      
+        // Run the function when the window is resized
+        window.onresize = checkScreenSize;
+      </script>
+      
         
         <script>
           function animateIcons() {
