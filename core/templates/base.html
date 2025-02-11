@@ -156,43 +156,52 @@ body {
 
     <body>
         <!-- Navigation-->
-       
         <div class="container-fluid hero-section bg-dark text-white d-flex align-items-center" style="height: 100vh; background-image: url('https://example.com/background.jpg'); background-size: cover; background-position: center; position: relative;">
           <!-- Overlay for better readability -->
           <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);"></div>
           <div class="d-flex justify-content-center mb-5">
-            <small class="text-success" style="font-size: 14px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
-              Note: We help you to Grow
-          </small>
-          
+              <small class="text-success" style="font-size: 14px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+                  Note: We help you to Grow
+              </small>
           </div>
           <!-- Content -->
           <div class="container position-relative z-index-1">
-            <!-- Center Email -->
-            <div class="d-flex flex-column align-items-center text-center email-container">
-                <a href="mailto:info@studysmartexperts.com" class="text-success email" style="font-size: 28px; font-weight: bold;">
-                    <i class="fas fa-envelope me-2 text-success"></i>
-                    info@studysmartexperts.com
-                </a>
-                <!-- Social Media Icons -->
-                <div class="social-icons">
-                    <a href="#" class="icon facebook" style="--angle: 0deg;">
-                        <i class="fab fa-facebook-f text-primary"></i>
-                    </a>
-                    <a href="#" class="icon twitter" style="--angle: 90deg;">
-                        <i class="fab fa-twitter text-primary"></i>
-                    </a>
-                    <a href="#" class="icon instagram" style="--angle: 180deg;">
-                        <i class="fab fa-instagram text-primary"></i>
-                    </a>
-                    <a href="#" class="icon linkedin" style="--angle: 270deg;">
-                        <i class="fab fa-linkedin-in text-primary"></i>
-                    </a>
-                </div>
-            </div>
+              <!-- Center Email -->
+              <div class="d-flex flex-column align-items-center text-center email-container">
+                  <a href="mailto:info@datamasteryhub.com" class="text-success email" style="font-size: 28px; font-weight: bold;">
+                      <i class="fas fa-envelope me-2 text-success"></i>
+                      info@datamasteryhub.com
+                  </a>
+                  <!-- Social Media Icons -->
+                  <div class="social-icons">
+                      <a href="#" class="icon facebook" style="--angle: 0deg;">
+                          <i class="fab fa-facebook-f text-primary"></i>
+                      </a>
+                      <a href="#" class="icon twitter" style="--angle: 90deg;">
+                          <i class="fab fa-twitter text-primary"></i>
+                      </a>
+                      <a href="#" class="icon instagram" style="--angle: 180deg;">
+                          <i class="fab fa-instagram text-primary"></i>
+                      </a>
+                      <a href="#" class="icon linkedin" style="--angle: 270deg;">
+                          <i class="fab fa-linkedin-in text-primary"></i>
+                      </a>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
         <style>
+          /* Default state - hide for smaller devices */
+.hero-section {
+  display: none !important;
+}
+
+/* Show for larger devices */
+@media (min-width: 768px) { /* This breakpoint is for tablets and above, adjust as needed */
+  .hero-section {
+      display: flex !important;
+  }
+}
           .email-container {
             position: relative;
           }
@@ -377,9 +386,9 @@ body {
             </div>
             
                 
-            <a href="mailto:info@studysmartexperts.com" class="py-3 text-light border-bottom border-primary">
+            <a href="mailto:info@datamasteryhub.com" class="py-3 text-light border-bottom border-primary">
               <i class="fas fa-envelope text-secondary me-2"></i>
-              info@studysmartexperts.com
+              info@datamasteryhub.com
           </a>
           
               </div>
