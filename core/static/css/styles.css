@@ -1,3 +1,16 @@
+@media screen and (max-width: 768px) {
+    #hero_section {
+      display: none !important;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    #hero_section {
+      display: block !important;
+    }
+  }
+  
+
 /*** Spinner Start ***/
 
 #spinner {
