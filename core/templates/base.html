@@ -63,6 +63,9 @@
       content="0BqRQ18B4tjgHl5Wl2xgvn-jBDQ-_DQu1xYxO_pdPfI"
     />
     <style>
+      .navbar {
+        padding: 15px !important; /* Ensure there's enough room for toggler */
+      }
    /* Reset margin and padding for body and html to remove any default spacing */
 html, body {
   margin: 0;
@@ -223,7 +226,7 @@ body {
       <!-- Topbar End -->
   
       <!-- Navbar Start -->
-      <div class="container-fluid bg-primary">
+      <div class="container-fluid bg-primary" >
         <div class="container">
           <nav class="navbar navbar-dark navbar-expand-lg py-0">
             <a href="/" class="navbar-brand">
@@ -275,6 +278,7 @@ body {
           </nav>
         </div>
       </div>
+      
       <!-- Navbar End -->
         
         {%block content%}
