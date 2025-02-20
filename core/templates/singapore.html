@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Data Solutions & Analytics Services in SINGAPORE</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transform your SINGAPORE business with AI-driven data analytics, business intelligence, and predictive modeling solutions.">
+    <meta name="keywords" content="Data Analytics SINGAPORE, AI Solutions Dubai, Business Intelligence Abu Dhabi">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8fafc;
+            color: #1a2d46;
+            overflow-x: hidden;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=AI+Pattern') no-repeat center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .hero-text {
+            position: relative;
+            z-index: 2;
+        }
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            color: #1a2d46;
+        }
+        .display-4 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6f61, #ff8a7b);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #e65b50, #ff6f61);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+        }
+        .btn-success {
+            background: #25D366;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn-success:hover {
+            background: #1ebe57;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #1e3c72;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .bg-light {
+            background: #f8fafc;
+        }
+         /*  footer {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px 0;
+        }
+      Responsive Adjustments */
+        @media (max-width: 768px) {
+            .display-4 {
+                font-size: 2rem;
+            }
+            .btn-primary, .btn-success {
+                padding: 10px 20px;
+                font-size: 14px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .hero-section {
+                padding: 80px 0 60px;
+            }
+            .service-card {
+                margin-bottom: 20px;
+            }
+        }
+        @media (max-width: 576px) {
+            .btn-primary, .btn-success {
+                white-space: normal;
+                overflow-wrap: break-word;
+            }
+        }
+
+        /* Why Choose Us Section Styles */
+        .why-choose-us {
+            padding: 60px 20px;
+            background: rgba(4, 79, 149, 0.8) url('https://media.gettyimages.com/id/1283355839/video/4k-network-background.jpg?s=640x640&k=20&c=WisbPTNcFg3Q0NyrC5iIK0DtM0hTOa3ukfJOpmUKW0o=') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            color: white; /* Ensure text is readable */
+        }
+        
+        .why-choose-us h2 {
+            color: #f8fafc;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .why-choose-us p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .feature {
+            margin: 20px 0;
+        }
+        .feature-icon {
+            background-color: transparent;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            position: relative;
+            animation: zoomIn 1s ease-in-out infinite alternate;
+        }
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: rgba(0, 174, 239, 0.5);
+            animation: zoomOut 1s ease-in-out 0.2s infinite alternate;
+        }
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            background: rgba(0, 174, 239, 0.3);
+            animation: zoomOut 1s ease-in-out 0.4s infinite alternate;
+        }
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomOut {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .feature h3 {
+            color: #00AEEF;
+            font-weight: 700;
+        }
+        .feature p {
+            color: #1a2d46;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .why-choose-us {
+                padding: 40px 10px;
+            }
+            .feature-icon {
+                width: 80px;
+                height: 80px;
+            }
+            .feature h3 {
+                font-size: 1.1rem;
+            }
+            .feature p {
+                font-size: 0.8rem;
+            }
+        }
+        .testimonial-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card .text-success {
+            color: #28a745; /* Green color for names, matching the image */
+        }
+        
+        .testimonial-card .text-primary {
+            color: #007bff; /* Blue color for stars */
+        }
+        
+        /* Ensure multiple items show side by side */
+        .carousel-item {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .carousel-inner .row {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        /* Optional: Right-to-Left (RTL) support if needed */
+        html[dir="rtl"] .carousel-control-next {
+            left: 0;
+            right: auto;
+        }
+        
+        html[dir="rtl"] .carousel-control-prev {
+            right: 0;
+            left: auto;
+        }
+        .services-section {
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-category {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 2px solid #e9ecef; /* Vertical divider like in the image */
+        }
+        
+        .service-category h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .service-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-category li {
+            font-size: 0.95rem;
+            color: #666; /* Grayed-out text like in the image */
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr; /* Stack columns on smaller screens */
+            }
+        }
+        .partner-companies {
+            background-color: #f7f9fc;
+            padding: 60px 20px;
+        }
+        
+        .partner-companies h2 {
+            color: #047f95; /* Adjusted color to match a professional palette */
+        }
+        
+        .partner-logo img {
+            width: 100px; /* Adjust image size as needed */
+            transition: transform 0.3s ease;
+        }
+        
+        .partner-logo:hover img {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+        
+        .partner-logo p {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .partner-logo img {
+                width: 150px;
+            }
+        }
+        
+            /* General styling for the testimonial section */
+        .services-section {
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .testimonial-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card img {
+            border: 2px solid #28a745; /* Green border for profile images */
+        }
+        
+        .text-success {
+            color: #28a745 !important; /* Green color for names */
+        }
+        
+        .text-primary {
+            color: #007bff !important; /* Blue color for stars */
+        }
+        
+        /* Media Query for Small Devices (e.g., mobile phones, < 768px) */
+        @media (max-width: 768px) {
+            .row.justify-content-center {
+                padding: 0 1rem; /* Add horizontal padding to prevent cards from touching edges */
+            }
+        
+            .col-12.col-md-4 {
+                flex: 0 0 100%; /* Full width for each card on mobile */
+                max-width: 100%; /* Ensure cards don’t exceed screen width */
+                margin-bottom: 1rem; /* Space between cards */
+            }
+        
+            #testimonialCarousel .carousel-item .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center cards vertically in the row */
+            }
+        
+            .testimonial-card {
+                width: 90%; /* Slightly narrower cards for better centering */
+                margin: 0 auto 1rem; /* Center horizontally with bottom margin */
+            }
+        
+            /* Adjust carousel controls for better visibility on mobile */
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 10%;
+            }
+        
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: #28a745; /* Green background for controls */
+                border-radius: 50%;
+            }
+        }
+       
+        /* Hide scrollbar for Webkit browsers */
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, etc. */
+  }
+   /* Navbar Styling */
+   .navbar-custom {
+    background-color: #1E3CA1 !important; /* Match exact blue */
+    padding: 15px 0 !important;
+}
+
+.navbar-brand {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.navbar-brand span {
+    color: #2CD07E !important; /* Green accent */
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 16px !important;
+    margin-right: 20px !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Call section */
+.call-section {
+    color: white !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+.call-section i {
+    color: #2CD07E !important;
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .call-section {
+        display: none !important; /* Hide call on mobile */
+    }
+}
+    </style>
+    
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="/">DATA<span>MASTERYHUB</span></a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Call Section -->
+        <div class="d-none d-lg-block">
+            <span class="call-section">
+                Have any questions? <i class="fas fa-phone-alt"></i> Call: +1 979-312-7061
+            </span>
+        </div>
+    </div>
+</nav>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center hero-text">
+                <div class="col-12 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold animate__hero">Leverage Data & AI to Drive Business Growth in SINGAPORE</h1>
+                    <p class="lead mt-3">Transform business operations with cutting-edge AI, data science, and predictive analytics solutions tailored for SINGAPORE enterprises.</p>
+                    <div class="mt-4 d-flex flex-column flex-lg-row justify-content-center gap-3">
+                        <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+                        <!-- <a href="https://wa.me/971xxxxxxxxx" target="_blank" class="btn btn-success">
+                            <i class="fab fa-whatsapp me-2"></i> Chat with a Data Expert
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SINGAPORE-Specific Data Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Our Key Data Services in SINGAPORE</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card animate__card">
+                        <img src="https://www.bitrix24.com/upload/iblock/e3a/mz8n7op1vwwqob6g8ycs5albkzh4i721.jpg" alt="AI-Powered Business Intelligence" class="img-fluid mb-3" style="border-radius: 10px;">
+                        <h4>AI-Powered Business Intelligence & Advanced Analytics</h4>
+                        <p>AI-driven dashboards for financial institutions, startups, and enterprises in Singapore. KPI tracking, executive insights, and automated business intelligence solutions.</p>
+                        <!-- SEO Keywords -->
+                        <meta name="keywords" content="Business Intelligence Singapore, AI-Powered Dashboards SG, Data Analytics Solutions Singapore">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card animate__card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5612AQGXX58KhDecmw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1718856196468?e=2147483647&v=beta&t=IAEFLEVV3NF2KsP028-7w82yWjP_C81bY9SJX9wHWpk" alt="Fintech & Banking AI Solutions" class="img-fluid mb-3" style="border-radius: 10px;">
+                        <h4>AI & Predictive Analytics for Fintech & Banking</h4>
+                        <p>AI-driven risk assessment, fraud detection, and automated trading models for Singapore’s financial institutions and fintech startups.</p>
+                        <!-- SEO Keywords -->
+                        <meta name="keywords" content="Fintech AI Solutions Singapore, Predictive Analytics for Banking SG, Algorithmic Trading AI Singapore">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card animate__card">
+                        <img src="https://s9.easternpeak.com/wp-content/uploads/2021/05/Frame-80.png" alt="E-Commerce & Digital Economy AI" class="img-fluid mb-3" style="border-radius: 10px;">
+                        <h4>AI & Machine Learning for E-Commerce & Digital Economy</h4>
+                        <p>AI-driven customer behavior insights, automated marketing strategies, and recommendation engines for Singapore's growing e-commerce industry.</p>
+                        <!-- SEO Keywords -->
+                        <meta name="keywords" content="AI for E-Commerce Singapore, Digital Economy Analytics SG, Machine Learning for Retail Singapore">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card animate__card">
+                        <img src="https://nexocode.com/cdn-cgi/image/width=600,quality=75/images/Predictive-analytics-benefits-in-logistics-and-chemical-supply-chain.webp" alt="AI in Logistics & Supply Chain" class="img-fluid mb-3" style="border-radius: 10px;">
+                        <h4>AI & Predictive Analytics for Logistics & Supply Chain</h4>
+                        <p>AI-powered demand forecasting, route optimization, and warehouse automation for Singapore’s supply chain industry.</p>
+                        <!-- SEO Keywords -->
+                        <meta name="keywords" content="Logistics AI Solutions Singapore, Predictive Analytics for Supply Chain SG, AI for Inventory Optimization Singapore">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card animate__card">
+                        <img src="https://nextgeninvent.com/wp-content/uploads/2024/09/Applications-of-AI-in-Financial-Modeling.png" alt="Investment & Financial AI" class="img-fluid mb-3" style="border-radius: 10px;">
+                        <h4>AI & Investment Analytics for Financial Markets</h4>
+                        <p>AI-driven market analysis, portfolio optimization, and risk forecasting for hedge funds, traders, and investors in Singapore.</p>
+                        <!-- SEO Keywords -->
+                        <meta name="keywords" content="Investment AI Singapore, AI for Stock Market Analysis SG, Predictive Analytics for Trading Singapore">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card animate__card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLDcqRfpYBPoWComA-WN3mH50mwqU76TBKdw&s" alt="AI Chatbots for Businesses" class="img-fluid mb-3" style="border-radius: 10px;">
+                        <h4>AI-Powered Chatbots & NLP for Singapore Enterprises</h4>
+                        <p>AI-driven chatbots, voice assistants, and automation solutions tailored for finance, e-commerce, and corporate businesses in Singapore.</p>
+                        <!-- SEO Keywords -->
+                        <meta name="keywords" content="AI Chatbot Singapore, NLP AI Assistants SG, AI for Customer Support Singapore">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+
+    <section class="py-5 bg-light services-section">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Other Services</h2>
+            <div class="services-grid">
+                <div class="service-category text-center">
+                    <h3>AI & Data Science</h3>
+                    <ul class="custom-bullet-list">
+                        <li>AI-Powered Predictive Analytics</li>
+                        <li>Machine Learning & Deep Learning Solutions</li>
+                        <li>Data Engineering & ETL Pipelines</li>
+                        <li>AI for Finance & Investment Risk Modeling</li>
+                        <li>AI-Powered Market Research & Consumer Insights</li>
+                        <li>Natural Language Processing (NLP) & Chatbots</li>
+                        <li>AI-Powered Personalization for E-Commerce</li>
+                        <li>AI in Healthcare & Medical Diagnostics</li>
+                        <li>Data Science for Smart Cities & Infrastructure</li>
+                        <li>AI-Driven Supply Chain & Logistics Optimization</li>
+                    </ul>
+                </div>
+                <div class="service-category text-center">
+                    <h3>IT Consulting & Advisory</h3>
+                    <ul>
+                        <li>AI Strategy & Digital Transformation</li>
+                        <li>Enterprise AI Adoption Consulting</li>
+                        <li>Big Data Architecture & Implementation</li>
+                        <li>Cloud-Based AI & Machine Learning Solutions</li>
+                        <li>Cybersecurity AI for Threat Detection</li>
+                        <li>DevOps & MLOps for Scalable AI Deployment</li>
+                        <li>IoT & AI-Enabled Smart Business Solutions</li>
+                        <li>AI Integration for Blockchain & Web3 Solutions</li>
+                        <li>IT Workforce Augmentation & AI Consulting</li>
+                        <li>Advanced Robotics & Automation Consulting</li>
+                    </ul>
+                </div>
+                <div class="service-category text-center">
+                    <h3>Big Data & Business Intelligence</h3>
+                    <ul>
+                        <li>AI-Driven Data Analytics & Insights</li>
+                        <li>Real-Time Data Visualization & Dashboards</li>
+                        <li>Business Intelligence for Enterprise Strategy</li>
+                        <li>AI-Powered Customer Segmentation & Personalization</li>
+                        <li>Data Governance & Compliance Management</li>
+                        <li>Financial Data Modeling & Risk Forecasting</li>
+                        <li>Automated Data Pipelines & ETL Solutions</li>
+                        <li>Data Science for Fraud Detection & Anomaly Detection</li>
+                        <li>Smart Cities & AI-Enabled Urban Planning</li>
+                        <li>AI in Retail Analytics & Consumer Behavior Prediction</li>
+                    </ul>
+                </div>
+                <div class="service-category text-center">
+                    <h3>Digital Transformation</h3>
+                    <ul>
+                        <li>AI-Powered Business Process Automation</li>
+                        <li>Robotic Process Automation (RPA) for Efficiency</li>
+                        <li>AI in Finance, Fintech & Automated Trading</li>
+                        <li>Cybersecurity AI for Fraud Detection</li>
+                        <li>AI-Enabled Edge Computing & IoT Integration</li>
+                        <li>Blockchain AI for Smart Contracts & DeFi Solutions</li>
+                        <li>AI-Powered Metaverse & Virtual Reality Solutions</li>
+                        <li>Augmented Reality (AR) & AI in Immersive Tech</li>
+                        <li>AI-Driven Digital Twins for Predictive Maintenance</li>
+                        <li>AI for Autonomous Vehicles & Smart Mobility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Why Choose Our Data Solutions?</h2>
+            <p class="text-light">At the core of every successful business is data. Our company specializes in delivering intelligent data services that empower SINGAPORE enterprises to unlock insights, optimize operations, and drive sustainable growth. Here's why we're the trusted partner for companies seeking data-driven transformation.</p>
+            <div class="row">
+                <div class="col-md-6 feature">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/ios-filled/50/50C9F5/leaf.png" alt="Quality Icon" style="width: 50px;">
+                    </div>
+                    <h3>DATA-DRIVEN EXCELLENCE</h3>
+                    <p class="text-light">We ensure every solution is powered by data analytics and AI, delivering accurate insights that fuel informed decision-making, helping companies stay ahead in the competitive SINGAPORE market.</p>
+                </div>
+                <div class="col-md-6 feature">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/ios-filled/50/50C9F5/clock.png" alt="On-Time Icon" style="width: 50px;">
+                    </div>
+                    <h3>FAST & RELIABLE DELIVERY</h3>
+                    <p class="text-light">We understand the critical nature of time in business. Our team delivers scalable data solutions within tight deadlines, ensuring you can act on insights without delay.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 feature">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/ios-filled/50/50C9F5/like.png" alt="Passionate Team Icon" style="width: 50px;">
+                    </div>
+                    <h3>INDUSTRY-LEADING EXPERTISE</h3>
+                    <p class="text-light">Our team of seasoned data scientists and AI specialists brings cutting-edge knowledge, working closely with your business to solve your unique data challenges and capitalize on new opportunities.</p>
+                </div>
+                <div class="col-md-6 feature">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/ios-filled/50/50C9F5/briefcase.png" alt="Professional Services Icon" style="width: 50px;">
+                    </div>
+                    <h3>CUSTOMIZED DATA SOLUTIONS</h3>
+                    <p class="text-light">We don't believe in one-size-fits-all. Our solutions are tailored to meet the specific needs of your industry, helping you make smarter decisions and streamline operations with bespoke data strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- our partner companies -->
+<section class="partner-companies py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Our Trusted Partners in SINGAPORE</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="partner-logo animate__animated animate__fadeInUp">
+                    <img src="https://static.zawya.com/view/acePublic/alias/contentid/ZDBjNDM5YzAtMGI4ZC00/0/1-jpg.webp?f=3%3A2&q=0.75&w=3840" alt="Company 1" class="img-fluid">
+                    <!-- <p class="mt-3">Company 1</p> -->
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="partner-logo animate__animated animate__fadeInUp">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZUSijjqxayzLjoO4y2xF-JeRY3zdcSmEGg&s" alt="Company 2" class="img-fluid">
+                    <!-- <p class="mt-3">G-TECH</p> -->
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="partner-logo animate__animated animate__fadeInUp">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOQ2SYauSubE9tAVOCH-dgY9JAJ9ZgDSM7ng&s" alt="Company 3" class="img-fluid">
+                    <!-- <p class="mt-3">Company 3</p> -->
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="partner-logo animate__animated animate__fadeInUp">
+                    <img src="https://www.domain-b.com/Uploads/Images/75f7d051-fef3-4390-a4e0-e36f57eb0ef8-Cognizant(final).jpg" alt="Company 4" class="img-fluid">
+                    <p class="mt-3">COGNIZENT</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="partner-logo animate__animated animate__fadeInUp">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnBc2agroOHR2fJPtnVQ8KCEhWyXXN2xR_A&s" alt="Company 5" class="img-fluid">
+                    <!-- <p class="mt-3">Company 5</p> -->
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="partner-logo animate__animated animate__fadeInUp">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhXsPZjPxJEVsHFnQNKqfgp51j4lnD9JW_fA&s" alt="Company 6" class="img-fluid">
+                    <!-- <p class="mt-3">Company 6</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Case Studies Section -->
+<!-- Client Testimonials Carousel Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5"> What Our Singapore Clients Say About Us</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Testimonial Pair 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-4">
+                            <div class="testimonial-card text-center p-4">
+                                <img src="https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.jpg?s=612x612&w=0&k=20&c=NJSugBzNuZqb7DJ8ZgLfYKb3qPr2EJMvKZ21Sj5Sfq4=" alt="John Tan" class="rounded-circle mb-3" width="80" height="80">
+                                <h5 class="text-success">John Ahman</h5>
+                                <p class="mb-1">Entrepreneur</p>
+                                <p class="mb-2"> <span class="text-primary">⭐⭐⭐⭐⭐</span></p>
+                                <p class="mb-2">"DataMasteryHub’s AI-powered analytics transformed our retail operations in Singapore, driving a 30% increase in revenue through data-driven decision-making."</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="testimonial-card text-center p-4">
+                                <img src="https://www.shutterstock.com/image-photo/young-happy-business-woman-working-600nw-2189325893.jpg" alt="Rachel Lim" class="rounded-circle mb-3" width="80" height="80">
+                                <h5 class="text-success">Rachel Lim</h5>
+                                <p class="mb-1">Business Consultant</p>
+                                <p class="mb-2"> <span class="text-primary">⭐⭐⭐⭐⭐</span></p>
+                                <p class="mb-2">"With DataMasteryHub’s predictive analytics, we optimized risk management strategies for our financial institution in Singapore, reducing exposure to high-risk investments."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Pair 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-4">
+                            <div class="testimonial-card text-center p-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3i3L_nhfPbCKGQu_ndjcKe85FtK6a0nebw&s" alt="David Ng" class="rounded-circle mb-3" width="80" height="80">
+                                <h5 class="text-success">David Gray</h5>
+                                <p class="mb-1">Tech Solutions Lead</p>
+                                <p class="mb-2"> <span class="text-primary">⭐⭐⭐⭐⭐</span></p>
+                                <p class="mb-2">"Thanks to DataMasteryHub, our logistics company improved supply chain efficiency by 35%, leveraging AI-driven demand forecasting and automation."</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="testimonial-card text-center p-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIQ0mp2KTCQvMbEN5nRzdrkfRhaJ6uHLnrOg&s" alt="Mohammed Farid" class="rounded-circle mb-3" width="80" height="80">
+                                <h5 class="text-success">Mohammed Farid</h5>
+                                <p class="mb-1">E-Commerce Manager</p>
+                                <p class="mb-2"> <span class="text-primary">⭐⭐⭐⭐⭐</span></p>
+                                <p class="mb-2">"DataMasteryHub’s AI-powered recommendations engine helped us personalize customer experiences, boosting sales by 40%."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Pair 3 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-4">
+                            <div class="testimonial-card text-center p-4">
+                                <img src="https://www.chathamhouse.org/sites/default/files/styles/12_6_media_huge/public/2025-01/2025-01-29-china-tech-dominance-tik-tok-inauguration-2194451433.jpg?h=83fcc83a&itok=NJ5nkBBC" alt="Felicia Cheng" class="rounded-circle mb-3" width="80" height="80">
+                                <h5 class="text-success">Felicia Cheng</h5>
+                                <p class="mb-1">Operations Manager</p>
+                                <p class="mb-2"> <span class="text-primary">⭐⭐⭐⭐⭐</span></p>
+                                <p class="mb-2">"By integ AI-powered automation from DataMasteryHub, we reduced our operational costs by 25% while improving workflow efficiency."</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="testimonial-card text-center p-4">
+                                <img src="https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/825155270ContentStrategist.jpg=ws1280x960" alt="Sophia Tan" class="rounded-circle mb-3" width="80" height="80">
+                                <h5 class="text-success">Sophia Terry</h5>
+                                <p class="mb-1">Marketing Director</p>
+                                <p class="mb-2"> <span class="text-primary">⭐⭐⭐⭐⭐</span></p>
+                                <p class="mb-2">"DataMasteryHub’s AI-driven insights helped us double our digital campaign ROI by identifying high-converting audience segments."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Add Bootstrap CSS and JS for functionality -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Contact DataMasteryHub</h2>
+            <p class="text-center mb-4">Reach out to us for world-class AI and data solutions tailored to drive your business growth.</p>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="text-center">
+                        <p><strong>SINGAPORE Office:</strong> Virtual Business Presence, Dubai</p>
+                        <p><strong>Phone:</strong> +971-xxx-xxx-xxxx</p>
+                        <!-- <p><strong>LinkedIn:</strong> <a href="#" class="text-primary">DataMasteryHub SINGAPORE</a></p> -->
+                    </div>
+                    <!-- <form method="POST" class="border p-4 rounded mt-4 shadow">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/971xxxxxxxxx" target="_blank" class="whatsapp-float">
+            <img src="https://img.icons8.com/ios-filled/50/4CAF50/whatsapp.png" alt="WhatsApp Icon">
+        </a>
+    </section>
+    
+    <!-- WhatsApp Button Animation and Styling -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: zoomInOut 2s infinite ease-in-out;
+            transition: transform 0.3s;
+        }
+    
+        .whatsapp-float:hover {
+            transform: scale(1.2);
+        }
+    
+        .whatsapp-float img {
+            width: 50px;
+            height: 50px;
+        }
+    
+        @keyframes zoomInOut {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        @media (max-width: 767px) {
+            .whatsapp-float img {
+                width: 35px;
+                height: 35px;
+            }
+    
+            .whatsapp-float {
+                padding: 5px;
+            }
+        }
+        #contact {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/410/77/199/5bd0bdc12d414-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: #fff; /* Ensure text remains readable */
+            padding: 60px 20px;
+        }
+        
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to improve text contrast */
+            z-index: -1;
+        }
+        
+    </style>
+    
+
+    <!-- Footer -->
+    <!-- Footer Start -->
+    <div class="container-fluid footer wow fadeIn" data-wow-delay=".3s" style="padding:10px !important; background-color:black;">
+        <div class="container pt-5 pb-4">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <a href="/" style="text-decoration: none !important;">
+                        <h1 style="color: white !important; font-weight: bold !important;">
+                            Data<span style="color: #2CD07E !important;"> masteryhub</span>
+                        </h1>
+                    </a>
+                    <p style="color: white !important; margin-top: 15px !important; font-size: 16px !important;">
+                        Welcome to the Company that makes you feel at home.
+                    </p>
+                    <p style="color: white !important; margin-top: 15px !important; font-size: 16px !important;">
+                        We design solutions and deliver excellence
+                    </p>
+                    <div class="d-flex justify-content-center align-items-center gap-2 flex-nowrap">
+                        <a href="#" class="btn btn-light btn-square rounded-circle" target="_blank">
+                            <i class="fab fa-facebook-f" style="color: #2CD07E !important;"></i>
+                        </a>
+                        <a href="#" class="btn btn-light btn-square rounded-circle" target="_blank">
+                            <i class="fab fa-twitter" style="color: #2CD07E !important;"></i>
+                        </a>
+                        <a href="#" class="btn btn-light btn-square rounded-circle" target="_blank">
+                            <i class="fab fa-instagram" style="color: #2CD07E !important;"></i>
+                        </a>
+                        <a href="#" class="btn btn-light btn-square rounded-circle" target="_blank">
+                            <i class="fab fa-linkedin-in" style="color: #2CD07E !important;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="d-md-flex flex-md-column align-items-center">
+                        <a href="#" style="color: #2CD07E !important; font-size: 18px !important; font-weight: bold !important; text-decoration: none !important;">
+                            Short Link
+                        </a>
+                        <div class="mt-4 short-link">
+                            <a href="{%url 'about'%}" style="color: white !important; font-size: 16px !important; text-decoration: none !important;" class="mb-2 d-block">
+                                <i class="fas fa-angle-right" style="color: #2CD07E !important; margin-right: 5px !important;"></i>About us
+                            </a>
+                            <a href="{% url 'services' %}" style="color: white !important; font-size: 16px !important; text-decoration: none !important;" class="mb-2 d-block">
+                                <i class="fas fa-angle-right" style="color: #2CD07E !important; margin-right: 5px !important;"></i>Our Services
+                            </a>
+                            <a href="#" style="color: white !important; font-size: 16px !important; text-decoration: none !important;" class="mb-2 d-block">
+                                <i class="fas fa-angle-right" style="color: #2CD07E !important; margin-right: 5px !important;"></i>Our Projects
+                            </a>
+                            <a href="#" style="color: white !important; font-size: 16px !important; text-decoration: none !important;" class="mb-2 d-block">
+                                <i class="fas fa-angle-right" style="color: #2CD07E !important; margin-right: 5px !important;"></i>Latest Blog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <a href="/contact" style="color: #2CD07E !important; font-size: 18px !important; font-weight: bold !important; text-decoration: none !important;">
+                        Contact Us
+                    </a>
+                    <div class="text-white mt-4 d-flex flex-column contact-link">
+                        <a href="#" class="pb-3 text-light border-bottom border-primary"></a>
+                        <a href="https://wa.me/message/ZZHC5HWWJBPLP1" class="py-3 border-bottom border-primary" style="color: white !important; font-size: 16px !important; text-decoration: none !important;">
+                            <i class="fab fa-whatsapp" style="color: #2CD07E !important; margin-right: 5px !important;"></i> +19793127061
+                        </a>
+                    </div>
+                    <a href="mailto:info@datamasteryhub.com" class="py-3 border-bottom border-primary" style="color: white !important; font-size: 16px !important; text-decoration: none !important;">
+                        <i class="fas fa-envelope" style="color: #2CD07E !important; margin-right: 5px !important;"></i> info@datamasteryhub.com
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr style="border-color: white !important; margin-top: 40px !important; margin-bottom: 20px !important;" />
+        <div class="row">
+            <div class="col-md-6 col-sm-12 text-center text-md-start"
+                style="position: fixed !important; bottom: 0 !important; left: 0 !important; padding: 10px !important; background-color: black !important; z-index: 999 !important;">
+                <span style="color: white !important;">
+                    <a href="#" style="color: #2CD07E !important; text-decoration: none !important;">
+                        <i class="fas fa-copyright" style="color: #2CD07E !important; margin-right: 5px !important;"></i>DataMasteryHub
+                    </a>, All rights reserved.
+                </span>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-end"
+                style="position: fixed !important; bottom: 0 !important; right: 0 !important; padding: 10px !important; background-color: black !important; z-index: 999 !important;">
+                <span style="color: white !important;">
+                    Courtesy of
+                    <a href="#" style="color: #2CD07E !important; text-decoration: none !important;">DataMasteryHub</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+<!-- Media query for small devices -->
+<style>
+  @media (max-width: 576px) {
+    #left-section {
+      position: static !important;
+      text-align: center !important;
+    }
+
+    #right-section {
+      position: static !important;
+      text-align: center !important;
+      margin-top: 10px !important;
+    }
+  }
+
+  
+</style>
+
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Hero Section Animation
+        gsap.from(".animate__hero", {
+            opacity: 0,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            delay: 0.3
+        });
+
+        // Card Animations on Scroll
+        gsap.utils.toArray(".animate__card").forEach(card => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+
+        // Smooth Scroll for CTA
+        $("a[href*='#']").not("[target='_blank']").on("click", function(e) {
+            e.preventDefault();
+            const target = $(this.hash);
+            $("html, body").animate({
+                scrollTop: target.offset().top - 70
+            }, 800);
+        });
+
+        // Form Validation
+        $("form").on("submit", function(e) {
+            e.preventDefault();
+            alert("Thank you for your message! We will get back to you soon.");
+            $(this)[0].reset();
+        });
+    </script>
+</body>
+</html>

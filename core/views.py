@@ -2,8 +2,11 @@ from django.shortcuts import render
 from .models import Document
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import UserRegisterForm
+from django.core.mail import send_mail
+from django.conf import settings
+# from .forms import UserRegisterForm
 from django.contrib.auth import authenticate, login
+from .forms import UserRegisterForm, ContactForm
 
 
 # View for Index Page Documents
@@ -58,6 +61,33 @@ def login_page(request):
             messages.error(request, 'Invalid username or password')  # Show an error message
 
     return render(request, 'login.html')
+
+
+
+# View for handling the contact form
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Get form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            
+            # Send the email
+            send_mail(
+                f"New Contact Form Submission from {name}",
+                f"Message from {name} ({email}):\n\n{message}",
+                settings.DEFAULT_FROM_EMAIL,  # From email
+                ['your-recipient-email@example.com'],  # Replace with your email
+                fail_silently=False,
+            )
+            # Optional: redirect to a success page after email is sent
+            return render(request, 'contact_success.html')
+    else:
+        form = ContactForm()
+    
+    return render(request, 'uae.html', {'form': form})
 
 # View for Reports Page Documents
 def data_scrapping(request):
@@ -127,6 +157,17 @@ def technical_writing(request):
 
 def exams(request):
     return render(request, 'exams.html', {})
+
+# View for Data Analysis Page Documents
+def singapore(request):
+    documents = Document.objects.filter(page='singapore')
+    return render(request, 'singapore.html', {'documents': documents})
+# View for Data Analysis Page Documents
+def uae(request):
+    documents = Document.objects.filter(page='uae')
+    return render(request, 'uae.html', {'documents': documents})
+
+
 
 
 

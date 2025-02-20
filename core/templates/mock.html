@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataMasteryHub - AI & Data Consulting</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .hero {
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .cta-button {
+            display: inline-block;
+            background: #0088cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .animated-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .footer {
+            background: rgba(1, 41, 112, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div class="hero">
+        <h1 class="animated-heading">AI & Data Consulting for UAE & Singapore</h1>
+        <p>Transform your business with AI-driven analytics and machine learning solutions.</p>
+        <a href="#contact" class="cta-button">Get a Free Consultation</a>
+    </div>
+    
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Our Data Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card p-4">
+                    <h3>Business Intelligence</h3>
+                    <p>Unlock powerful data insights with advanced analytics dashboards.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card p-4">
+                    <h3>Predictive Analytics</h3>
+                    <p>AI-driven trend forecasting and risk assessment for business growth.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card p-4">
+                    <h3>Financial Data Analysis</h3>
+                    <p>Custom financial models and investment risk analytics solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">Email: <strong>contact@datamasteryhub.com</strong></p>
+        <p class="text-center">LinkedIn: <a href="#">Message Us on LinkedIn</a></p>
+        <p class="text-center">WhatsApp: <a href="#">Chat with Us</a></p>
+    </div>
+    
+    <div class="footer">&copy; 2025 DataMasteryHub. All rights reserved.</div>
+
+    <script>
+        anime({
+            targets: '.animated-heading',
+            translateY: [-50, 0],
+            opacity: [0, 1],
+            duration: 1000,
+            easing: 'easeOutQuad'
+        });
+
+        // Canvas Background Animation
+        const canvas = document.getElementById("backgroundCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray = [];
+
+        class Particle {
+            constructor(x, y, size, speedX, speedY) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.speedX = speedX;
+                this.speedY = speedY;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = "rgba(0, 136, 204, 0.7)";
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            for (let i = 0; i < 100; i++) {
+                let size = Math.random() * 5 + 2;
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                let speedX = (Math.random() - 0.5) * 2;
+                let speedY = (Math.random() - 0.5) * 2;
+                particlesArray.push(new Particle(x, y, size, speedX, speedY));
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particlesArray.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+    </script>
+</body>
+</html>

@@ -6,6 +6,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('services/', views.services, name='services'),
     path('register/', views.register, name='register'),
+    path('contact_view/', views.contact_view, name='contact_view'),
     path('data_scrapping/', views.data_scrapping, name='data_scrapping'),
     path('survey/', views.survey, name='survey'),
     path('ml/', views.ml, name='ml'),
@@ -22,5 +23,9 @@ urlpatterns = [
     path('exams/', views.exams, name='exams'),
     path('assignment/', views.assignment, name='assignment'),
     path('technical_writing/', views.technical_writing, name='technical_writing'),
+    path('singapore/', views.singapore, name='singapore'),
+    path('uae/', views.uae, name='uae'),
+    
+
 
 ]
