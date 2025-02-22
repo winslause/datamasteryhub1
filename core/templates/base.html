@@ -285,6 +285,41 @@ body {
         {%endblock%}
 
         <!-- Footer-->
+<!-- Back to First Page Button -->
+<button onclick="goToFirstPage()" class="btn btn-primary float-button">Back</button>
+
+<style>
+  /* Style for floating the button to the right */
+  .float-button {
+    position: fixed;         /* Stays in place even when scrolling */
+    right: 20px;             /* Distance from the right side of the page */
+    bottom: 20px;            /* Distance from the bottom of the page */
+    z-index: 9999;           /* Ensures it's on top of other elements */
+    padding: 10px 20px;      /* Padding for the button */
+    border-radius: 50px;     /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a nice look */
+  }
+</style>
+
+<script>
+  // JavaScript function to navigate to the first page
+  function goToFirstPage() {
+      var firstPageUrl = localStorage.getItem('firstPage');
+
+      // Debugging: Check if we are retrieving the first page correctly
+      if (firstPageUrl) {
+          //alert('Navigating to: ' + firstPageUrl);  // Show an alert with the first page URL
+          window.location.href = firstPageUrl;  // Navigate to the first page
+      } else {
+          alert('First page not found in localStorage.');
+      }
+  }
+
+  // Storing the first page when the website is opened for the first time
+  if (!localStorage.getItem('firstPage')) {
+      localStorage.setItem('firstPage', window.location.href);
+  }
+</script>
 
 
         <!-- Footer Start -->
@@ -407,6 +442,7 @@ body {
     }
   }
 </style>
+
 
           </div>
         </div>
