@@ -19,6 +19,7 @@ urlpatterns = [
     path('business_forecasting/', views.business_forecasting, name='business_forecasting'),
     path('predictive_analysis/', views.predictive_analysis, name='predictive_analysis'),
     path('data_visualization/', views.data_visualization, name='data_visualization'),
+    path('sports_prediction/', views.sports_prediction, name='sports_prediction'),
     path('login/', views.login_page, name='login'),
     path('exams/', views.exams, name='exams'),
     path('assignment/', views.assignment, name='assignment'),

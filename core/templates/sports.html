@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="sports-prediction-container">
+    <!-- Introduction Section -->
+    <section id="sports-prediction-intro">
+        <h1 class="sports-prediction-intro-heading">AI-Powered Sports Prediction Solutions</h1>
+        <p class="sports-prediction-intro-description">
+            Stay ahead of the game with our AI-driven sports prediction services. Our models use Machine Learning, Time-Series Analysis, and Deep Learning to forecast match outcomes, analyze player performance, and optimize game strategies.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="sports-prediction-services">
+        <h2 class="sports-prediction-services-heading">What We Offer</h2>
+        <div class="sports-prediction-services-grid">
+            <div class="sports-prediction-service-card">
+                <h4 class="sports-prediction-service-title">AI-Based Sports Prediction</h4>
+                <p class="sports-prediction-service-description">Forecast team wins, player form, and performance trends using state-of-the-art AI models.</p>
+            </div>
+            <div class="sports-prediction-service-card">
+                <h4 class="sports-prediction-service-title">Player & Team Analytics</h4>
+                <p class="sports-prediction-service-description">Monitor injury trends, detect player fatigue, and track performance for both teams and individual players.</p>
+            </div>
+            <div class="sports-prediction-service-card">
+                <h4 class="sports-prediction-service-title">Time-Series Analysis & Forecasting</h4>
+                <p class="sports-prediction-service-description">Predict future game outcomes based on historical data with advanced time-series analysis techniques.</p>
+            </div>
+            <div class="sports-prediction-service-card">
+                <h4 class="sports-prediction-service-title">Data-Driven Betting Insights</h4>
+                <p class="sports-prediction-service-description">Leverage statistical modeling for risk assessment and pattern recognition to inform betting strategies.</p>
+            </div>
+            <div class="sports-prediction-service-card">
+                <h4 class="sports-prediction-service-title">Game Strategy Optimization</h4>
+                <p class="sports-prediction-service-description">Receive AI-driven recommendations to improve tactical game planning and team strategies.</p>
+            </div>
+            <div class="sports-prediction-service-card">
+                <h4 class="sports-prediction-service-title">Real-Time Data Processing</h4>
+                <p class="sports-prediction-service-description">Analyze live match statistics in real-time, providing insights instantly through automated systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Learning Models Section -->
+    <section id="sports-prediction-ml-models">
+        <h2 class="sports-prediction-ml-heading">Machine Learning Models Used</h2>
+        <ul class="sports-prediction-ml-list">
+            <li>Regression Models: Linear, Logistic, Ridge, Lasso, Bayesian</li>
+            <li>Classification Models: Decision Trees, Random Forest, XGBoost, SVM, k-NN</li>
+            <li>Deep Learning: LSTMs, CNNs, Neural Networks for pattern recognition</li>
+            <li>Clustering & Ranking: k-Means, Hierarchical, DBSCAN for player/team segmentation</li>
+        </ul>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="sports-prediction-tools">
+        <h2 class="sports-prediction-tools-heading">Tools & Technologies</h2>
+        <p class="sports-prediction-tools-description">
+            We employ cutting-edge technologies such as Python, R, TensorFlow, Keras, Scikit-learn, Pandas, and NumPy to deliver accurate and reliable predictions.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="sports-prediction-cta">
+        <h2 class="sports-prediction-cta-heading">Elevate Your Sports Predictions with AI</h2>
+        <p class="sports-prediction-cta-description">
+            Connect with our experts today to learn how our AI-powered sports prediction models can give you a competitive edge in forecasting outcomes and optimizing game strategies.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=19793127061&text=Hello,%20I'm%20interested%20in%20sports%20prediction%20services" class="cta-button">
+            <i class="fab fa-whatsapp"></i>
+            Chat With Our Experts
+        </a>
+    </section>
+</div>
+
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Container Styles */
+.sports-prediction-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction Section */
+#sports-prediction-intro {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sports-prediction-intro-heading {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.sports-prediction-intro-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Services Section */
+#sports-prediction-services {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.sports-prediction-services-heading {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sports-prediction-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sports-prediction-service-card {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ML Models Section */
+#sports-prediction-ml-models {
+    padding: 40px 20px;
+    background-color: #eaf2f8;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sports-prediction-ml-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sports-prediction-ml-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sports-prediction-ml-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Tools Section */
+#sports-prediction-tools {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sports-prediction-tools-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sports-prediction-tools-description {
+    font-size: 1.2em;
+}
+
+/* Contact Section */
+#sports-prediction-cta {
+    padding: 40px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.sports-prediction-cta-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sports-prediction-cta-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sports-prediction-service-card {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}

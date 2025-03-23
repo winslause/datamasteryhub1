@@ -149,6 +149,11 @@ def data_visualization(request):
     documents = Document.objects.filter(page='data_visualization')
     return render(request, 'research.html', {'documents': documents})
 
+# View for Research Page Documents
+def sports_prediction(request):
+    documents = Document.objects.filter(page='sports_prediction')
+    return render(request, 'sports.html', {'documents': documents})
+
 
 # View for the technical writing section
 
